@@ -1,0 +1,523 @@
+body {
+  margin: 0vh;
+  padding: 1vh;
+  background: #FFFAFA;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.welcomeAnimation {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  -webkit-align-items: center; /* Safari 7.0+ */
+  justify-content: center;
+  -webkit-justify-content: center; /* Safari 6.1+ */
+  overflow: hidden;
+}
+
+.descriptionTop {
+  padding-top: 10vh;
+  width: 100vw;
+  position: relative;
+  margin: 0vh;
+  padding-left: 0vh;
+  font-size: 3vw;
+}
+
+.pictureRight {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row
+  justify-content: flex-start;
+  width: 100vw;
+  height: 43vh;
+  position: relative;
+  padding: 1vw;
+}
+
+.vertical
+{
+  margin-left: 5vw;
+  position: relative;
+  width: auto;
+  height: 5vh;
+  width: 10vw;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg); /* Safari/Chrome */
+  -moz-transform: rotate(-90deg); /* Firefox */
+  -o-transform: rotate(-90deg); /* Opera */
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  top: 35vh;
+}
+
+.vertical > a {
+  color: green;
+}
+
+#picPortrait {
+  width:40vw;
+  height:40vh;
+}
+
+.buttonSplash {
+  padding: 5vw;
+  height: 40vh;
+  margin: 0vw;
+}
+
+.btn-group-vertical > .btn {
+  padding: 1vw;
+}
+
+
+.special .btn {
+  flex: 1;
+  padding: 1vw;
+  height: 10vw;
+}
+
+.link {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-between;
+  position: relative;
+  margin: 1vw;
+  padding: 1vw;
+  height: auto;
+  width: 70vw;
+  color: black;
+}
+
+.mainPageLink {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  bottom: 0vh;
+  right: 0vw;
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+  border: 5px solid black;
+  position: fixed;
+  z-index: 100;
+  background: #FFFAFA;
+}
+
+.mainPage {
+  margin: 0vh;
+  padding: 0vh;
+  background: #FFFAFA;
+  height: 98vh;
+  border: 5px solid orange;
+}
+
+.header {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  top: 1vh;
+  position: fixed;
+  width: 93vw;
+  height: 10vh;
+  border: 5px solid black;
+
+}
+
+#headerBackLink {
+  color: black;
+  text-decoration: none;
+  font-family: monospace;
+  padding-left: 2vh;
+  border: 5px solid black;
+
+}
+
+#headerBackLink:hover {
+  color: orange;
+}
+
+
+.mainPageLink > #emailLinkMain {
+  color: green;
+  font-size: 4vw;
+}
+
+.mainPageButtons {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border: 5px solid black;
+
+}
+
+.mainPageButtons > .btn {
+  flex: 1 1 0px
+  padding: 2vw;
+  margin: 2vw;
+}
+
+.empty-div{
+  width: 2vw;
+  height: auto;
+  border: 5px solid black;
+}
+
+ .navbar-collapse.collapse.in {
+   display: inline-block;
+ }
+
+.mainPageMoving {
+  position: relative;
+  margin: auto;
+  width: 80vw;
+  height: 75vh;
+  overflow: scroll;
+  border: 5px solid green;
+}
+
+.movingSection {
+  height: 100%;
+  width: 100%;
+  padding: 1vw;
+  overflow-y:auto
+}
+
+.movingSection > b {
+    font-size: 8vw;
+    opacity: .8;
+    background-color: white;
+    padding: 1vw;
+    color: black;
+}
+
+
+#aboutMeDiv {
+  height: 100%;
+  width: 100%;
+  opacity: .9;
+  font-size: 3.7vw;
+  background: #e0ffc7 url(./assets/BladeRunner2049.gif) no-repeat center center;
+  color: white;
+  font: serif;
+}
+
+#experienceDiv {
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  font-size: 4vw;
+  color: white;
+  font: lucida;
+  background: #e0ffc7 url(./assets/PixelArtGifs.gif) no-repeat center center;
+}
+
+#relevantCoursework {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%
+  height: 30%;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: auto;
+  height: auto;
+  font-size: 1vw;
+  color: black;
+}
+
+.card-text {
+  font-size: 1vw;
+}
+
+#abilitiesDiv {
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  background: #e0ffc7 url(./assets/Fallinlovewiththesegorgeous8-bitGIFsofJapan.gif) no-repeat center center;
+}
+
+.fa-star {
+  color: white;
+}
+.checked {
+  color: orange;
+}
+
+#projectsDiv {
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  background: #e0ffc7 url(./assets/Someamazingpixelartbywaneella.gif) no-repeat center center;
+}
+
+#navbar {
+  z-index: 100;
+}
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 14em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: hidden;
+    transform: translateY(-50%);
+}
+
+.line-1-font{
+  font-family:sans-serif;
+  font-weight: bold;
+  color: rgb(128, 0, 32);
+  overflow: hidden;
+
+}
+
+/* Animation
+.anim-typewriter-fast{
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+*/
+
+.anim-typewriter-slow{
+  overflow-x: hidden;
+
+  animation: typewriter 3s steps(29) 1.2s 1 normal both,
+             blinkTextCursor 500ms steps(29) infinite normal;
+}
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 14em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0,0,0,.65);}
+  to{border-right-color: transparent;}
+}
+
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
+
+/* For IPads/Tablets */
+
+@media only screen and (min-width: 768px) {
+  .descriptionTop {
+    padding-top: 8vh;
+    font-size: 1.5vw;
+    overflow-x: hidden;
+    overflow: hidden;
+
+  }
+
+  .vertical
+  {
+    margin-left: 10vw;
+    height: 4vh;
+    width: 9vw;
+    font-size: 2vh;
+    top: 35vh;
+  }
+
+  .pictureRight {
+    width: 80vw;
+    height: 45vh;
+    padding: 1vw;
+  }
+
+  #picPortrait {
+    width:39vw;
+    height:42vh;
+  }
+
+  .buttonSplash {
+    padding: 1vw;
+    height: 42vh;
+    margin: 1vw;
+  }
+
+  .btn-group-vertical > .btn {
+    padding: 1vw;
+  }
+
+  .special .btn {
+    flex: 1;
+    height: 4vw;
+  }
+
+
+  .link {
+    width: 40vw;
+    padding: 1vw;
+
+  }
+
+  .anim-typewriter-slow{
+    animation: typewriter 3.5s steps(29) 1.2s 1 normal both,
+               blinkTextCursor 500ms steps(29) infinite normal;
+  }
+
+
+  .movingSection > b {
+      font-size: 8vw;
+  }
+
+  #aboutMeDiv {
+    font-size: 3.5vw;
+  }
+
+  #experienceDiv {
+    background: #e0ffc7 url(./assets/treatlarge.gif) no-repeat center center;
+  }
+
+  .card {
+    font-size: 1vw;
+  }
+
+  .card-text {
+    font-size: 1.8vw;
+  }
+
+  #abilitiesDiv {
+    background: #e0ffc7 url(./assets/treatsslarge.gif) no-repeat center center;
+  }
+
+  #projectsDiv {
+    background: #e0ffc7 url(./assets/treatslarge.gif) no-repeat center center;
+  }
+
+  .mainPageLink {
+    height: 12vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .descriptionTop {
+    padding-top: 13vh;
+    width: 100vw;
+    font-size: 1vw;
+  }
+
+  .vertical
+  {
+    margin-left: 17vw;
+    font-size: 2.5vh;
+    top: 40vh;
+  }
+
+  .pictureRight {
+    width: 82vw;
+    height: 62vh;
+    padding: 1vw;
+  }
+
+  #picPortrait {
+    width:28vw;
+    height:58vh;
+  }
+
+  .buttonSplash {
+    padding: 2vw;
+    margin: 1vw;
+    height: 58vh;
+  }
+
+  .btn-group-vertical > .btn {
+    padding: 1vw;
+  }
+
+  .special .btn {
+    flex: 1;
+    height: 3vw;
+  }
+
+  .link {
+    width: 30vw;
+  }
+
+  .anim-typewriter-slow{
+    animation: typewriter 3s steps(29) 1.2s 1 normal both,
+               blinkTextCursor 500ms steps(29) infinite normal;
+  }
+
+  .movingSection > b {
+      font-size: 8vw;
+  }
+
+  #aboutMeDiv {
+    font-size: 2vw;
+  }
+
+  #experienceDiv {
+    font-size: 1.5vw;
+    background: #e0ffc7 url(./assets/treatlarge.gif) no-repeat center center;
+  }
+
+  .card {
+    font-size: 1vw;
+  }
+
+  .card-text {
+    font-size: 3vw;
+  }
+
+  #abilitiesDiv {
+    background: #e0ffc7 url(./assets/treatsslarge.gif) no-repeat center center;
+  }
+
+  #projectsDiv {
+    background: #e0ffc7 url(./assets/treatslarge.gif) no-repeat center center;
+  }
+
+  .mainPageLink {
+    height: 12vh;
+  }
+}
+
+/* I think use this website to see how to properly build vue
+https://github.com/brampijper/personal-vue-website/blob/master/src/components/TheHeader.vue */

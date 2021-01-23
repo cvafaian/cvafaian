@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Title and style sheet -->
+        <title> About Christina Vafaian </title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <!-- Meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <!-- VueScrollTo -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
+
+        <!-- Bootstrap -->
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Axios -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Include FontAwesome for social media -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <!-- Wrapper for the entire app -->
+        <div id='app'>
+
+          <!-- Opening Welcome Page -->
+          <div class="welcomeAnimation" v-if="showWelcome">
+              <div class="descriptionTop">
+                  <p class="line-1 line-1-font">Christina Vafaian</p>
+                  <p class="line-1 anim-typewriter-slow">Developer. Creator. Designer</p>
+
+              </div>
+
+              <div class="pictureRight">
+
+                  <div class="vertical">
+                    <a href="mailto:cvafaian@umich.edu" target="_blank" title="Message me">
+                      cvafaian@umich.edu
+                    </a>
+                  </div>
+
+                  <img id="picPortrait" src="assets/self_portrait.png" alt="Picture of me!"/>
+
+                  <div class="buttonSplash btn-group-vertical special">
+                      <button type="button" class="btn btn-outline-primary" v-on:click="clickedWelcomePageButton('#aboutMeDiv')">About Me</button>
+                      <br>
+
+                      <button type="button" class="btn btn-outline-secondary" v-on:click="clickedWelcomePageButton('#experienceDiv')">Experience</button>
+                      <br>
+
+                      <button type="button" class="btn btn-outline-success" v-on:click="clickedWelcomePageButton('#abilitiesDiv')">Abilities</button>
+                      <br>
+
+                      <button type="button" class="btn btn-outline-danger" v-on:click="clickedWelcomePageButton('#projectsDiv')">Projects</button>
+                  </div>
+              </div>
+
+              <div class="link">
+
+                  <a href="assets/resume.pdf" target="_blank" title="See resume">
+                    <i class="fa-2x fa fa-file"></i>
+                  </a>
+
+                  <a href="mailto:cvafaian@umich.edu" target="_blank" title="Message me">
+                    <i class="fa-2x fa fa-envelope"></i>
+                  </a>
+
+                  <a href="https://github.com/cvafaian" target="_blank"  title="Visit github profile">
+                    <i class="fa-2x fa fa-github-square"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/in/christina-vafaian/" target="_blank" title="Visit linkedin profile">
+                    <i class="fa-2x fa fa-linkedin"></i>
+                  </a>
+              </div>
+
+          </div>
+
+
+          <!-- Navigate to Infinite Scroll -->
+          <div class="mainPage" v-if="showMainPage">
+              <!--
+
+              <a id="headerBackLink" href="https://www.cvafaian.me" title="Back to opening page">
+                Christina Vafaian
+              </a>
+
+              <div class="mainPageButtons btn-group">
+                <button type="button" class="btn btn-outline-primary" v-on:click="clickedWelcomePageButton('.aboutMeDiv')">About Me</button>
+                <div class="empty-div"></div>
+
+                <button type="button" class="btn btn-outline-secondary" v-on:click="clickedWelcomePageButton('.experienceDiv')">Experience</button>
+                <div class="empty-div"></div>
+
+                <button type="button" class="btn btn-outline-success" v-on:click="clickedWelcomePageButton('.abilitiesDiv')">Abilities</button>
+                <div class="empty-div"></div>
+
+                <button type="button" class="btn btn-outline-danger" v-on:click="clickedWelcomePageButton('.projectsDiv')">Projects</button>
+                <div class="empty-div"></div>
+              </div>
+
+
+
+
+
+
+
+              <nav class="smooth-scroll navbar navbar-expand-lg navbar-light bg-light">
+                <a id="headerBackLink" href="https://www.cvafaian.me" title="Back to opening page">
+                  Christina Vafaian
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"  v-on:click="clickedToggleButton">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav" >
+                    <li class="nav-item" v-bind:class="{'active' : aboutMeActive}">
+                      <a class="nav-link" href="#aboutMeDiv" data-toggle="collapse" v-on:click="clickedMainButton('#aboutMeDiv')">
+                        About Me
+                      </a>
+                    </li>
+                    <li class="nav-item" v-bind:class="{'active' : experienceActive}">
+                      <a class="nav-link" href="#experienceDiv" v-on:click="clickedMainButton('#experienceDiv')">
+                        Experience
+                      </a>
+                    </li>
+                    <li class="nav-item" v-bind:class="{'active' : abilitiesActive}">
+                      <a class="nav-link" href="#abilitiesDiv" v-on:click="clickedMainButton('#abilitiesDiv')">
+                        Abilities
+                      </a>
+                    </li>
+
+                    <li class="nav-item" v-bind:class="{'active' : projectsActive}">
+                      <a class="nav-link" href="#projectsDiv" v-on:click="clickedMainButton('#projectsDiv')">
+                        Projects
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+
+-->
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand" id="headerBackLink" href="https://www.cvafaian.me" title="Back to opening page">
+                Christina Vafaian
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item" v-bind:class="{'active' : aboutMeActive}">
+                    <a class="nav-link" href="#aboutMeDiv" data-toggle="collapse" data-target=".navbar-collapse.show"  v-on:click="clickedMainButton('#aboutMeDiv')">About Me</a>
+                  </li>
+
+                  <li class="nav-item" v-bind:class="{'active' : experienceActive}">
+                    <a class="nav-link" href="#experienceDiv" data-toggle="collapse" data-target=".navbar-collapse.show" v-on:click="clickedMainButton('#experienceDiv')">Experience</a>
+                  </li>
+
+                  <li class="nav-item" v-bind:class="{'active' : abilitiesActive}">
+                    <a class="nav-link" href="#abilitiesDiv" data-toggle="collapse" data-target=".navbar-collapse.show" v-on:click="clickedMainButton('#abilitiesDiv')">Abilities</a>
+                  </li>
+
+                  <li class="nav-item" v-bind:class="{'active' : projectsActive}">
+                    <a class="nav-link" href="#projectsDiv" data-toggle="collapse" data-target=".navbar-collapse.show" v-on:click="clickedMainButton('#projectsDiv')">Projects</a>
+                  </li>
+
+                </ul>
+              </div>
+            </nav>
+
+            <div class ="mainPageMoving">
+
+              <div class="movingSection" id="aboutMeDiv">
+
+                <b> About Me </b>
+
+                <br>
+
+                <p> I am a Senior at the University of Michigan. At the moment I'm pursuing a Bachelors in Computer Science and plan to graduate by December 2020.</p>
+                <p> I am creative and enjoy making an impact in the things I do. I believe this drive is expressed through my passion for web and software development. I enjoy thoughtful design which not only looks good but that is user friendly.</p>
+                <p> The main languages I use are Python and C++, but I am always interested in learning more! </p>
+                <p> Currently I am seeking full time employment. </p>
+
+              </div>
+
+              <div  class="movingSection" id="experienceDiv">
+                <b> My Experience </b>
+
+                <br>
+
+                <p> I have completed small solo projects all the way up to 5 member team projects. Most projects I've done are in C++, Python, and JavaScript. However, I do have some experience doing projects with databases such as MySQL and MongoDB (lesser). </p>
+
+                <p> Currently I am a Student Software Engineer for Bosch through the University of Michigan's Multidisciplinary Design Program.</p>
+                <p> Through this experience, I have gotten the opportunity to integrate an end to end platform for internal Bosch personnel. Through computer vision and machine learning our platform is able to detect cut-in/cut-outs of vehicles. With this, the platform can be used as a tool to replace hours of tedious manual tagging by Bosch interns.</p>
+
+                <p> Additionally, I am currently a Student Grader for EECS 493. This is a class I had taken this past Winter 2020 semester and greatly enjoyed. I really value the learning opportunity I've been given. Through this position, I am able to see how my fellow peers design and think about code along with the thought and care that instructors put into facilitating education when teaching.</p>
+
+                <br>
+
+                <p> Some relevant coursework I've taken </p>
+
+                <div id="relevantCoursework">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">EECS 493 (HTML/CSS/JS)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">User Interface Development</h6>
+                        <p class="card-text">Task analysis, design of functionality, display and interaction design, and usability evaluation. Interface programming using an object-oriented application framework.</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">EECS 493 (HTML/CSS/JS)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">User Interface Development</h6>
+                        <p class="card-text">Task analysis, design of functionality, display and interaction design, and usability evaluation. Interface programming using an object-oriented application framework.</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">EECS 493 (HTML/CSS/JS)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">User Interface Development</h6>
+                        <p class="card-text">Task analysis, design of functionality, display and interaction design, and usability evaluation. Interface programming using an object-oriented application framework.</p>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">EECS 493 (HTML/CSS/JS)</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">User Interface Development</h6>
+                        <p class="card-text">Task analysis, design of functionality, display and interaction design, and usability evaluation. Interface programming using an object-oriented application framework.</p>
+                      </div>
+                    </div>
+                </div>
+
+
+
+                <!--
+                I don't have too many publicly available repos yet,
+                when I do I can use the github API to display it
+
+                <div v-for="(genreResult, genreIndex) in boolGenreArray">
+
+                  <ul>
+                    <li key={repo.id} className='list'>
+                      <span className='repo-text'>{repo.name} </span>
+                      <span className='repo-description'>{repo.description}</span>
+                    </li>
+                  </ul>
+
+                </div>
+                -->
+
+
+              </div>
+
+              <div  class="movingSection" id="abilitiesDiv">
+
+                <b> Abilities and Skills </b>
+
+                <ul>
+                  <li> C++
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+
+                  <li> HTML/CSS
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+
+                  <li> Python
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+
+                  <li> MySQL
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+
+                  <li> JavaScript
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                    <span class="fa fa-star fa-border"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+
+                  <li> Mandarin
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border checked"></span>
+                    <span class="fa fa-star fa-border"></span>
+                    <span class="fa fa-star fa-border"></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="movingSection" id="projectsDiv">
+
+                <b> Projects </b>
+
+                <p> Of the projects I've done these are some of the ones I am most proud of:</p>
+
+                <br>
+
+                <div id="relevantProject">
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Game image">
+                    <div class="card-body">
+                      <h5 class="card-title">Snowbla<sup>2</sup>ster</h5>
+                      <p class="card-text">Four member team project to raise awareness on roofing infrastracture through a fun game platform.</p>
+                      <a href="https://tinyurl.com/yd7al355" class="btn btn-primary">App Hosted Online Here</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Game image">
+                    <div class="card-body">
+                      <h5 class="card-title">Snowbla<sup>2</sup>ster</h5>
+                      <p class="card-text">Four member team project to raise awareness on roofing infrastracture through a fun game platform.</p>
+                      <a href="https://tinyurl.com/yd7al355" class="btn btn-primary">Code Unavailable -- Privately Owned </a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Game image">
+                    <div class="card-body">
+                      <h5 class="card-title">Snowbla<sup>2</sup>ster</h5>
+                      <p class="card-text">Four member team project to raise awareness on roofing infrastracture through a fun game platform.</p>
+                      <a href="https://tinyurl.com/yd7al355" class="btn btn-primary">Code Unavailable -- Privately Owned </a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Game image">
+                    <div class="card-body">
+                      <h5 class="card-title">Snowbla<sup>2</sup>ster</h5>
+                      <p class="card-text">Four member team project to raise awareness on roofing infrastracture through a fun game platform.</p>
+                      <a href="https://tinyurl.com/yd7al355" class="btn btn-primary">Code Unavailable -- Privately Owned </a>
+                    </div>
+                  </div>
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="mainPageLink">
+
+                <a href="https://docs.google.com/document/d/1b_8QpuH-TzOkcwTFTLhXNsaDLf8dmQERpA54Vm0Au_o/edit?usp=sharing" target="_blank" title="See resume">
+                  <i class="fa-2x fa fa-file"></i>
+                </a>
+
+                <a href="mailto:cvafaian@umich.edu" target="_blank" title="Message me">
+                  <i class="fa-2x fa fa-envelope"></i>
+                </a>
+
+                <a href="https://github.com/cvafaian" target="_blank"  title="Visit github profile">
+                  <i class="fa-2x fa fa-github-square"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/christina-vafaian/" target="_blank" title="Visit linkedin profile">
+                  <i class="fa-2x fa fa-linkedin"></i>
+                </a>
+
+                <a id="emailLinkMain" href="mailto:cvafaian@umich.edu" target="_blank" title="Message me">
+                  cvafaian@umich.edu
+                </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Include VueJS file -->
+        <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
