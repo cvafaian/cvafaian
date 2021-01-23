@@ -21,6 +21,7 @@ function MainPage(){
 							<Abilities />
 
 							<Projects />
+							
 						</div>
 
 						<MainContactBar />

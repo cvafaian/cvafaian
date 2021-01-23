@@ -26,16 +26,16 @@ class WelcomePage extends Component{
 										<img id="picPortrait" src={portrait} alt="Picture of me!"/>
 
 										<div className="buttonSplash btn-group-vertical special">
-												<button onClick={this.props.triggerAboutMe.bind(this)} type="button" className="btn btn-outline-primary">About Me</button>
+												<a href="#aboutMeDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-primary">About Me</a>
 												<br></br>
 
-												<button onClick={this.props.triggerExperience.bind(this)} type="button" className="btn btn-outline-secondary">Experience</button>
+												<a href="#experienceDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-secondary">Experience</a>
 												<br></br>
 
-												<button onClick={this.props.triggerAbilities.bind(this)} type="button" className="btn btn-outline-success">Abilities</button>
+												<a href="#abilitiesDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-success">Abilities</a>
 												<br></br>
 
-												<button onClick={this.props.triggerProjects.bind(this)} type="button" className="btn btn-outline-danger">Projects</button>
+												<a href="#projectsDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-danger">Projects</a>
 										</div>
 								</div>
 
