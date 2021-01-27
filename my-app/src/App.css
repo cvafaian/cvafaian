@@ -98,7 +98,7 @@
   margin: 1vw;
   padding: 1vw;
   height: auto;
-  width: 70vw;
+  width: 60vw;
   color: black;
 }
 
@@ -151,9 +151,9 @@
   color: black;
   text-decoration: none;
   font-family: monospace;
-  padding-left: 2vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
   border: 5px solid black;
-
 }
 
 #headerBackLink:hover {
@@ -222,7 +222,10 @@
     color: black;
 }
 
-
+.i {
+  background-size: cover;
+  background-position: center;
+}
 #aboutMeDiv {
   opacity: .7;
   font-size: 3.7vw;
@@ -300,7 +303,7 @@ html{
     width: 14em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
+    font-size: 190%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -343,7 +346,7 @@ html{
 
 /* For IPads/Tablets */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .descriptionTop {
     padding-top: 8vh;
     font-size: 1.5vw;
@@ -391,7 +394,7 @@ html{
 
 
   .link {
-    width: 40vw;
+    width: 42vw;
     padding: 1vw;
 
   }
@@ -431,11 +434,15 @@ html{
   }
 
   .mainPageLink .fa-2x {
-    font-size: 4em;
+    font-size: 3.5em;
+  }
+
+  #headerBackLink {
+    font-size: 2.4vw;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
   .descriptionTop {
     padding-top: 13vh;
     width: 100vw;
@@ -464,7 +471,7 @@ html{
     font-size: 3vw;
     padding: 2vw;
     margin: 1vw;
-    height: 58vh;
+    height: 50vh;
     text-align: center;
   }
 
@@ -515,7 +522,7 @@ html{
   }
 
   .fa-2x {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   .mainPageLink .fa-2x {
@@ -526,6 +533,13 @@ html{
       font-size: 5vw;
       text-align: center;
       justify-content: center;
+  }
 
+  .MainNavBarTop {
+    height: 10vh;
+  }
+
+  #headerBackLink {
+    font-size: 1.8vw;
   }
 }
