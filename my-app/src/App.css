@@ -201,7 +201,7 @@
   position: relative;
   margin: auto;
   width: 80vw;
-  height: 75vh;
+  height: 73vh;
   overflow: scroll;
   scroll-snap-type: y mandatory;
   border: 5px solid green;
@@ -290,10 +290,21 @@
   background-position: center;
 }
 
-#aboutMeDiv {
+#aboutMeDiv > p {
     text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
 }
 
+#experienceDiv > p {
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+
+#abilitiesDiv > p {
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
+
+#projectsDiv > p {
+    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+}
 #navbar {
   z-index: 100;
 }
@@ -411,7 +422,7 @@ html{
   }
 
   .mainPageMoving {
-    height: 77vh;
+    height: 75vh;
   }
 
   .movingSection > b {
@@ -500,7 +511,7 @@ html{
   }
 
   .mainPageMoving {
-    height: 75vh;
+    height: 73vh;
   }
 
   .movingSection > b {
