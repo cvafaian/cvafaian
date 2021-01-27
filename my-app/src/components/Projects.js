@@ -3,7 +3,9 @@ import React from 'react';
 function Projects(){
 	return (
 		<div className="movingSection" id="projectsDiv">
+			<b> Under Construction </b>
 
+			{/*
 			 <b> Projects </b>
 
 			 <p> Of the projects I've done these are some of the ones I am most proud of:</p>
@@ -20,6 +22,7 @@ function Projects(){
 					 </div>
 				 </div>
 			 </div>
+			 */}
 
 		 </div>
 	)

@@ -12,9 +12,10 @@ class App extends Component {
      this.clickedButton = this.clickedButton.bind(this);
   }
 
+
   clickedButton() {
       this.setState({
-          mainPageActive: !this.state.mainPageActive
+          mainPageActive: !this.state.mainPageActive,
       });
   }
 

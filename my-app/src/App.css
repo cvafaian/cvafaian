@@ -201,6 +201,7 @@
   width: 80vw;
   height: 75vh;
   overflow: scroll;
+  scroll-snap-type: y mandatory;
   border: 5px solid green;
 }
 
@@ -208,7 +209,9 @@
   height: 100%;
   width: 100%;
   padding: 1vw;
-  overflow-y:auto
+  overflow-y:auto;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .movingSection > b {
@@ -221,23 +224,23 @@
 
 
 #aboutMeDiv {
-  height: 100%;
-  width: 100%;
-  opacity: .9;
+  opacity: .7;
   font-size: 3.7vw;
-  background: #e0ffc7 url(./components/images/BladeRunner2049.gif) no-repeat center center;
+  background: #e0ffc7 url("./components/images/treat.gif") no-repeat center center;
   color: white;
   font: serif;
+  background-size: cover;
+  background-position: center;
 }
 
 #experienceDiv {
-  height: 100%;
-  width: 100%;
-  opacity: 0.75;
+  background: #e0ffc7 url("./components/images/treatlarge.gif") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
   font-size: 4vw;
   color: white;
   font: lucida;
-  background: #e0ffc7 url(./components/images/PixelArtGifs.gif) no-repeat center center;
 }
 
 #relevantCoursework {
@@ -261,10 +264,10 @@
 }
 
 #abilitiesDiv {
-  height: 100%;
-  width: 100%;
-  opacity: 0.75;
-  background: #e0ffc7 url(./components/images/Fallinlovewiththesegorgeous8-bitGIFsofJapan.gif) no-repeat center center;
+  opacity: 0.7;
+  background: #e0ffc7 url(./components/images/treatsslarge.gif) no-repeat center center;
+  background-size: cover;
+  background-position: center;
 }
 
 .fa-star {
@@ -275,10 +278,10 @@
 }
 
 #projectsDiv {
-  height: 100%;
-  width: 100%;
-  opacity: 0.75;
-  background: #e0ffc7 url(./components/images/Someamazingpixelartbywaneella.gif) no-repeat center center;
+  opacity: 0.7;
+  background: #e0ffc7 url(./components/images/treatslarge.gif) no-repeat center center;
+  background-size: cover;
+  background-position: center;
 }
 
 #navbar {
@@ -313,12 +316,6 @@ html{
 
 }
 
-/* Animation
-.anim-typewriter-fast{
-  animation: typewriter 3s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
-}
-*/
 
 .anim-typewriter-slow{
   overflow-x: hidden;
@@ -379,6 +376,8 @@ html{
     padding: 1vw;
     height: 42vh;
     margin: 1vw;
+    text-align: center;
+    font-size: 3vw;
   }
 
   .btn-group-vertical > .btn {
@@ -402,6 +401,9 @@ html{
                blinkTextCursor 500ms steps(29) infinite normal;
   }
 
+  .mainPageMoving {
+    height: 77vh;
+  }
 
   .movingSection > b {
       font-size: 8vw;
@@ -409,10 +411,6 @@ html{
 
   #aboutMeDiv {
     font-size: 3.5vw;
-  }
-
-  #experienceDiv {
-    background: #e0ffc7 url(./components/images/treatlarge.gif) no-repeat center center;
   }
 
   .card {
@@ -424,16 +422,16 @@ html{
     font-size: 1.8vw;
   }
 
-  #abilitiesDiv {
-    background: #e0ffc7 url(./components/images/treatsslarge.gif) no-repeat center center;
-  }
-
-  #projectsDiv {
-    background: #e0ffc7 url(./components/images/treatslarge.gif) no-repeat center center;
-  }
-
   .mainPageLink {
     height: 12vh;
+  }
+
+  .fa-2x {
+    font-size: 3em;
+  }
+
+  .mainPageLink .fa-2x {
+    font-size: 4em;
   }
 }
 
@@ -463,9 +461,11 @@ html{
   }
 
   .buttonSplash {
+    font-size: 3vw;
     padding: 2vw;
     margin: 1vw;
     height: 58vh;
+    text-align: center;
   }
 
   .btn-group-vertical > .btn {
@@ -486,6 +486,10 @@ html{
                blinkTextCursor 500ms steps(29) infinite normal;
   }
 
+  .mainPageMoving {
+    height: 75vh;
+  }
+
   .movingSection > b {
       font-size: 8vw;
   }
@@ -496,7 +500,6 @@ html{
 
   #experienceDiv {
     font-size: 1.5vw;
-    background: #e0ffc7 url(./components/images/treatlarge.gif) no-repeat center center;
   }
 
   .card {
@@ -507,18 +510,22 @@ html{
     font-size: 3vw;
   }
 
-  #abilitiesDiv {
-    background: #e0ffc7 url(./components/images/treatsslarge.gif) no-repeat center center;
-  }
-
-  #projectsDiv {
-    background: #e0ffc7 url(./components/images/treatslarge.gif) no-repeat center center;
-  }
-
   .mainPageLink {
     height: 12vh;
   }
-}
 
-/* I think use this website to see how to properly build vue
-https://github.com/brampijper/personal-vue-website/blob/master/src/components/TheHeader.vue */
+  .fa-2x {
+    font-size: 3em;
+  }
+
+  .mainPageLink .fa-2x {
+    font-size: 4em;
+  }
+
+  .movingSection > b {
+      font-size: 5vw;
+      text-align: center;
+      justify-content: center;
+
+  }
+}

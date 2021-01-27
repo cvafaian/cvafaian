@@ -3,7 +3,8 @@ import React from 'react';
 function Abilities(){
 	return (
 		<div  className="movingSection" id="abilitiesDiv">
-
+			<b> Under Construction </b>
+			{/*
 			<b> Abilities and Skills </b>
 
 			<ul>
@@ -55,6 +56,7 @@ function Abilities(){
 					<span className="fa fa-star fa-border"></span>
 				</li>
 			</ul>
+			*/}
 		</div>
 	)
 }

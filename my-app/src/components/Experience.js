@@ -3,16 +3,18 @@ import React from 'react';
 function Experience() {
 	return (
 		<div  className="movingSection" id="experienceDiv">
+			<b> Under Construction </b>
+
+			{/*
 			<b> My Experience </b>
 
 			<br></br>
 
-			<p> I have completed small solo projects all the way up to 5 member team projects. Most projects I've done are in C++, Python, and JavaScript. However, I do have some experience doing projects with databases such as MySQL and MongoDB (lesser). </p>
+			<p> I have experience in developing programs from small solo projects all the way up to 5 member team projects.</p>
+			<p> Most projects I've done are in C++, Python, and HTML/CSS/JavaScript. I also have some experience doing projects with databases such as MySQL, SQLite, and MongoDB (lesser). </p>
 
-			<p> Currently I am a Student Software Engineer for Bosch through the University of Michigan's Multidisciplinary Design Program.</p>
-			<p> Through this experience, I have gotten the opportunity to integrate an end to end platform for internal Bosch personnel. Through computer vision and machine learning our platform is able to detect cut-in/cut-outs of vehicles. With this, the platform can be used as a tool to replace hours of tedious manual tagging by Bosch interns.</p>
-
-			<p> Additionally, I am currently a Student Grader for EECS 493. This is a class I had taken this past Winter 2020 semester and greatly enjoyed. I really value the learning opportunity I've been given. Through this position, I am able to see how my fellow peers design and think about code along with the thought and care that instructors put into facilitating education when teaching.</p>
+			<p> Currently I am in the middle of rediscovering myself as a professional developer. During my time at university, I got the opportunity to code personal mini projects all the way to large scale, year long projects. However, only when I completed my first open-source contribution did I realize that software development is much more than just coding. </p>
+			<p> Software development to me is reading, presenting, collaborating, testing, and more. Thanks to my enrollment in the Literature</p>
 
 			<br></br>
 
@@ -51,6 +53,7 @@ function Experience() {
 						</div>
 					</div>
 			</div>
+			*/}
 		</div>
 	)
 }
