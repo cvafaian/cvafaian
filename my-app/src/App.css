@@ -28,7 +28,6 @@
 .descriptionTop {
   padding-top: 10vh;
   width: 100vw;
-  position: relative;
   margin: 0vh;
   padding-left: 0vh;
   font-size: 3vw;
@@ -84,6 +83,7 @@
 
 
 .special .btn {
+
   flex: 1;
   padding: 1vw;
   height: 10vw;
@@ -202,18 +202,37 @@
   margin: auto;
   width: 80vw;
   height: 73vh;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+  scroll-snap-type:  y mandatory; /* Firefox */
+  -ms-scroll-snap-type: y mandatory; /* IE/Edge */
+  -webkit-scroll-snap-type: y mandatory; /* Safari */
+  -webkit-scroll-snap-destination: 0% 0%;
+  -webkit-overflow-scrolling: touch; /* important for iOS */
   border: 5px solid green;
 }
 
-.movingSection {
+.movingWrapper {
+  overflow: visible;
   height: 100%;
   width: 100%;
-  padding: 1vw;
-  overflow-y:auto;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.movingSection::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.movingSection {
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 1vw;
+  -webkit-overflow-scrolling: touch; /* important for iOS */
 }
 
 .movingSection > b {
@@ -232,7 +251,11 @@
 #aboutMeDiv {
   opacity: .7;
   font-size: 3.7vw;
-  background: #e0ffc7 url("./components/images/treat.gif") no-repeat center center;
+  background: #008000 url("./components/images/treat.gif") center center no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
   color: white;
   font: serif;
   background-size: cover;
@@ -240,7 +263,11 @@
 }
 
 #experienceDiv {
-  background: #e0ffc7 url("./components/images/treatlarge.gif") no-repeat center center;
+  background: #008000 url("./components/images/treatlarge.gif") center center no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
   background-size: cover;
   background-position: center;
   opacity: 0.7;
@@ -250,7 +277,11 @@
 }
 
 #relevantCoursework {
-  display: flex;
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
@@ -271,7 +302,11 @@
 
 #abilitiesDiv {
   opacity: 0.7;
-  background: #e0ffc7 url(./components/images/treatsslarge.gif) no-repeat center center;
+  background: #008000 url("./components/images/treatsslarge.gif") center center no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
   background-size: cover;
   background-position: center;
 }
@@ -285,7 +320,11 @@
 
 #projectsDiv {
   opacity: 0.7;
-  background: #e0ffc7 url(./components/images/treatslarge.gif) no-repeat center center;
+  background: #008000 url("./components/images/treatslarge.gif") center center no-repeat;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size:cover;
   background-size: cover;
   background-position: center;
 }
@@ -317,7 +356,6 @@ html{
 
 .line-1{
     position: relative;
-    top: 50%;
     width: 14em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);

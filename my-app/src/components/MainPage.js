@@ -13,7 +13,7 @@ function MainPage(){
 						<NavBar />
 
             <div className ="mainPageMoving">
-
+			
 							<AboutMe />
 
 							<Experience />
@@ -21,7 +21,7 @@ function MainPage(){
 							<Abilities />
 
 							<Projects />
-							
+
 						</div>
 
 						<MainContactBar />

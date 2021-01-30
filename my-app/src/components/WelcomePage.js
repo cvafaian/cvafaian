@@ -12,7 +12,6 @@ class WelcomePage extends Component{
 								<div className="descriptionTop">
 										<p className="line-1 line-1-font">Christina Vafaian</p>
 										<p className="line-1 anim-typewriter-slow">Developer. Creator. Designer</p>
-
 								</div>
 
 								<div className="pictureRight">
@@ -26,16 +25,16 @@ class WelcomePage extends Component{
 										<img id="picPortrait" src={portrait} alt="Picture of me!"/>
 
 										<div className="buttonSplash btn-group-vertical special">
-												<a href="#aboutMeDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-primary">About Me</a>
+												<a href="#aboutMeDiv" onClick={this.props.triggerMainPage.bind(this)}  className="btn btn-outline-primary">About Me</a>
 												<br></br>
 
-												<a href="#experienceDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-secondary">Experience</a>
+												<a href="#experienceDiv" onClick={this.props.triggerMainPage.bind(this)} className="btn btn-outline-secondary">Experience</a>
 												<br></br>
 
-												<a href="#abilitiesDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-success">Abilities</a>
+												<a href="#abilitiesDiv" onClick={this.props.triggerMainPage.bind(this)}  className="btn btn-outline-success">Abilities</a>
 												<br></br>
 
-												<a href="#projectsDiv" onClick={this.props.triggerMainPage.bind(this)} type="button" className="btn btn-outline-danger">Projects</a>
+												<a href="#projectsDiv" onClick={this.props.triggerMainPage.bind(this)} className="btn btn-outline-danger">Projects</a>
 										</div>
 								</div>
 
