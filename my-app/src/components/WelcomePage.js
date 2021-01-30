@@ -1,12 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import portrait from './images/self_portrait.png'
 
-class WelcomePage extends Component{
-	constructor(props) {
-			super(props);
-	};
-
-	render () {
+function WelcomePage() {
 		return (
 			<div className="welcomeAnimation">
 								<div className="descriptionTop">
@@ -25,16 +20,16 @@ class WelcomePage extends Component{
 										<img id="picPortrait" src={portrait} alt="Picture of me!"/>
 
 										<div className="buttonSplash btn-group-vertical special">
-												<a href="#aboutMeDiv" onClick={this.props.triggerMainPage.bind(this)}  className="btn btn-outline-primary">About Me</a>
+												<a href="/MainPage#aboutMeDiv"  className="btn btn-outline-primary">About Me</a>
 												<br></br>
 
-												<a href="#experienceDiv" onClick={this.props.triggerMainPage.bind(this)} className="btn btn-outline-secondary">Experience</a>
+												<a href="/MainPage#experienceDiv" className="btn btn-outline-secondary">Experience</a>
 												<br></br>
 
-												<a href="#abilitiesDiv" onClick={this.props.triggerMainPage.bind(this)}  className="btn btn-outline-success">Abilities</a>
+												<a href="/MainPage#abilitiesDiv" className="btn btn-outline-success">Abilities</a>
 												<br></br>
 
-												<a href="#projectsDiv" onClick={this.props.triggerMainPage.bind(this)} className="btn btn-outline-danger">Projects</a>
+												<a href="/MainPage#projectsDiv" className="btn btn-outline-danger">Projects</a>
 										</div>
 								</div>
 
@@ -58,9 +53,7 @@ class WelcomePage extends Component{
 								</div>
 
 						</div>
-		);
-	}
-
+		)
 }
 
 export default WelcomePage
