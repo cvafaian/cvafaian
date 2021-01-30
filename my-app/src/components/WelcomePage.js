@@ -1,5 +1,6 @@
 import React from 'react';
-import portrait from './images/self_portrait.png'
+import portrait from './images/self_portrait.png';
+import { Link } from "react-router-dom";
 
 function WelcomePage() {
 		return (
@@ -20,16 +21,16 @@ function WelcomePage() {
 										<img id="picPortrait" src={portrait} alt="Picture of me!"/>
 
 										<div className="buttonSplash btn-group-vertical special">
-												<a href="/MainPage#aboutMeDiv"  className="btn btn-outline-primary">About Me</a>
+												<Link to="/MainPage#aboutMeDiv"  className="btn btn-outline-primary">About Me</Link>
 												<br></br>
 
-												<a href="/MainPage#experienceDiv" className="btn btn-outline-secondary">Experience</a>
+												<Link to="/MainPage#experienceDiv" className="btn btn-outline-secondary">Experience</Link>
 												<br></br>
 
-												<a href="/MainPage#abilitiesDiv" className="btn btn-outline-success">Abilities</a>
+												<Link to="/MainPage#abilitiesDiv" className="btn btn-outline-success">Abilities</Link>
 												<br></br>
 
-												<a href="/MainPage#projectsDiv" className="btn btn-outline-danger">Projects</a>
+												<Link to="/MainPage#projectsDiv" className="btn btn-outline-danger">Projects</Link>
 										</div>
 								</div>
 
