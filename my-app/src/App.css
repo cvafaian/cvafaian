@@ -3,8 +3,8 @@
   margin: 0vh;
   padding: 1vh;
   background: #FFFAFA;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   overflow: hidden;
 }
@@ -201,33 +201,21 @@
   position: relative;
   margin: auto;
   width: 80vw;
-  height: 73vh;
+  height: 70vh;
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
-  scroll-snap-type:  y mandatory; /* Firefox */
-  -ms-scroll-snap-type: y mandatory; /* IE/Edge */
-  -webkit-scroll-snap-type: y mandatory; /* Safari */
+  scroll-snap-type:  y proximity; /* Firefox */
+  -ms-scroll-snap-type: y proximity; /* IE/Edge */
+  -webkit-scroll-snap-type: y proximity; /* Safari */
   -webkit-scroll-snap-destination: 0% 0%;
   -webkit-overflow-scrolling: touch; /* important for iOS */
   border: 5px solid green;
 }
 
-.movingWrapper {
-  overflow: visible;
-  height: 100%;
-  width: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.movingSection::-webkit-scrollbar { /* WebKit */
-    width: 0;
-    height: 0;
-}
-
 .movingSection {
-  overflow-y: scroll;
-  height: 100%;
+  height:auto;
+  min-height: 100%;
+  overflow:visible;
   width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -250,7 +238,7 @@
 
 #aboutMeDiv {
   opacity: .7;
-  font-size: 3.7vw;
+  font-size: 5vw;
   background: #008000 url("./components/images/treat.gif") center center no-repeat;
   -ms-background-size: cover;
   -o-background-size: cover;
@@ -260,6 +248,15 @@
   font: serif;
   background-size: cover;
   background-position: center;
+}
+
+#experienceReference {
+  color: white;
+  text-decoration: underline;
+}
+
+#experienceReference:hover {
+  color: orange;
 }
 
 #experienceDiv {
@@ -468,8 +465,8 @@ html{
   }
 
   #aboutMeDiv {
-    font-size: 3.5vw;
-  }
+      font-size: 3.5vw;
+    }
 
   .card {
     font-size: 1vw;
@@ -586,8 +583,6 @@ html{
 
   .movingSection > b {
       font-size: 5vw;
-      text-align: center;
-      justify-content: center;
   }
 
   .MainNavBarTop {
