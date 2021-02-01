@@ -12,10 +12,10 @@ function NavBar(){
 			  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			  <Navbar.Collapse id="responsive-navbar-nav">
 			    <Nav className="mr-auto">
-			      <Nav.Link href="#aboutMeDiv">About Me</Nav.Link>
-			      <Nav.Link href="#experienceDiv">Experience</Nav.Link>
-						<Nav.Link href="#abilitiesDiv">Abilities</Nav.Link>
-						<Nav.Link href="#projectsDiv">Projects</Nav.Link>
+			      <Nav.Link href="#aboutMeDiv" spy="true" smooth="true">About Me</Nav.Link>
+			      <Nav.Link href="#experienceDiv" spy="true" smooth="true">Experience</Nav.Link>
+						<Nav.Link href="#abilitiesDiv" spy="true" smooth="true">Abilities</Nav.Link>
+						<Nav.Link href="#projectsDiv" spy="true" smooth="true">Projects</Nav.Link>
 			    </Nav>
 			  </Navbar.Collapse>
 			</Navbar>

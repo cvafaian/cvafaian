@@ -199,7 +199,7 @@
 }
 
 .navbar-collapse {
-  background-color: #FFFAFA;;
+  background-color: white;
 }
 
 .mainPageMoving {
@@ -219,6 +219,9 @@
 }
 
 .movingSection {
+  scroll-margin-top: 0vh;
+  scroll-snap-margin-top: 0vh;
+  scroll-margin: 0vh;
   height:auto;
   min-height: 100%;
   overflow:visible;

@@ -1,6 +1,6 @@
 import React from 'react';
 import portrait from './images/self_portrait.png';
-import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 function WelcomePage() {
 		return (
@@ -21,16 +21,16 @@ function WelcomePage() {
 										<img id="picPortrait" src={portrait} alt="Picture of me!"/>
 
 										<div className="buttonSplash btn-group-vertical special">
-												<Link to="/MainPage#aboutMeDiv"  className="btn btn-outline-primary">About Me</Link>
+												<HashLink smooth to="/MainPage#aboutMeDiv"  className="btn btn-outline-primary">About Me</HashLink>
 												<br></br>
 
-												<Link to="/MainPage#experienceDiv" className="btn btn-outline-secondary">Experience</Link>
+												<HashLink smooth to="/MainPage#experienceDiv" className="btn btn-outline-secondary">Experience</HashLink>
 												<br></br>
 
-												<Link to="/MainPage#abilitiesDiv" className="btn btn-outline-success">Abilities</Link>
+												<HashLink smooth to="/MainPage#abilitiesDiv" className="btn btn-outline-success">Abilities</HashLink>
 												<br></br>
 
-												<Link to="/MainPage#projectsDiv" className="btn btn-outline-danger">Projects</Link>
+												<HashLink smooth to="/MainPage#projectsDiv" className="btn btn-outline-danger">Projects</HashLink>
 										</div>
 								</div>
 

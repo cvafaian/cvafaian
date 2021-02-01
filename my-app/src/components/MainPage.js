@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import NavBar from './NavBar'
 import AboutMe from './AboutMe'
 import Experience from './Experience'
@@ -6,30 +6,41 @@ import Abilities from './Abilities'
 import Projects from './Projects'
 import MainContactBar from './MainContactBar'
 
-function MainPage(){
-	return (
-		<div className="mainPage">
+class MainPage extends Component {
+  constructor(props){
+     super(props)
+     this.state = {
+        aboutMeDivRef: React.createRef(),
+        experienceRef: React.createRef(),
+        projectsDivRef: React.createRef(),
+        abilitiesRef: React.createRef()
+     }
+  }
 
-						<NavBar />
+	render() {
+		return (
+			<div className="mainPage">
 
-            <div className ="mainPageMoving">
-			
-							<AboutMe />
+							<NavBar />
 
-							<Experience />
+	            <div className ="mainPageMoving">
 
-							<Abilities />
+								<AboutMe />
 
-							<Projects />
+								<Experience />
 
-						</div>
+								<Abilities />
 
-						<MainContactBar />
+								<Projects />
 
-    </div>
+							</div>
 
-	)
+							<MainContactBar />
 
+	    </div>
+
+		);
+	}
 }
 
 export default MainPage
