@@ -124,7 +124,7 @@
   border: 5px solid black;
   position: fixed;
   z-index: 100;
-  background: #FFFAFA;
+  background-color: #FFFAFA;
 }
 
 .mainPage {
@@ -199,15 +199,15 @@
 }
 
 .navbar-collapse {
-  background-color: white;
+  background-color: #FFFAFA;
 }
 
 .mainPageMoving {
-  position: relative;
+  position: sticky;
   top: 12vh;
   margin: auto;
   width: 80vw;
-  height: 70vh;
+  height: 65vh;
   overflow: -moz-scrollbars-vertical;
   overflow-y: scroll;
   scroll-snap-type:  y proximity; /* Firefox */
@@ -222,6 +222,7 @@
   scroll-margin-top: 0vh;
   scroll-snap-margin-top: 0vh;
   scroll-margin: 0vh;
+  top:12vh;
   height:auto;
   min-height: 100%;
   overflow:visible;
